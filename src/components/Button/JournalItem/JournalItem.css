@@ -1,0 +1,37 @@
+.journal-item__header {
+    font-family: Source Sans Pro;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 28px;
+    letter-spacing: 0%;
+}
+
+.journal-item__body {
+    display: flex;
+    gap: .625rem;
+}
+
+.journal-item__date {
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF66
+}
+
+.journal-item__text {
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF99;
+    overflow: hidden;
+}

@@ -1,0 +1,1 @@
+export const formatDate = (date) => Intl.DateTimeFormat('ru-Ru').format(date);
