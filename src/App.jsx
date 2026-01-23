@@ -18,7 +18,7 @@ function App() {
 		}
 	];
 	return (
-		<>
+		<div className='app-wrapper'> 
 			<h1>Заголовок</h1>
 			<Button />
 			<CardButton>
@@ -38,7 +38,7 @@ function App() {
 					date={data[1].date}
 				/>
 			</CardButton>
-		</>
+		</div>
 	);
 }
 
