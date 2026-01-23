@@ -3,6 +3,12 @@ import './App.css';
 import JournalItem from './components/Button/JournalItem/JournalItem.jsx';
 import Button from './components/Button/Button.jsx';
 import CardButton from './components/CardButton/CardButton.jsx';
+import LeftPanel from './layouts/LeftPanel/LeftPanel.jsx';
+import JournalList from './components/JournalList/JournalList.jsx';
+import Body from './layouts/Body/Body.jsx';
+import JournalAddButton from './components/JournalAddButton/JournalAddButton.jsx'
+import Header from './components/Header/Header.jsx'
+import { useState } from 'react';
 
 function App() {
 	const data = [
@@ -17,27 +23,41 @@ function App() {
 			date: new Date()
 		}
 	];
+
+    const [inputData, setInputData] = useState('');
+    const inputChange = (event) => {        
+        setInputData(event.target.value)
+    }
+
 	return (
 		<div className='app-wrapper'> 
-			<h1>Заголовок</h1>
-			<Button />
-			<CardButton>
-                Новое воспоминание
-			</CardButton>
-			<CardButton>
-				<JournalItem
-					title={data[0].title}
-					text={data[0].text}
-					date={data[0].date}
-				/>
-			</CardButton>
-			<CardButton>
-				<JournalItem
-					title={data[1].title}
-					text={data[1].text}
-					date={data[1].date}
-				/>
-			</CardButton>
+			<LeftPanel>
+				<Header />
+                <JournalAddButton />
+				<JournalList>
+					<CardButton>
+						<JournalItem
+							title={data[0].title}
+							text={data[0].text}
+							date={data[0].date}
+						/>
+					</CardButton>
+					<CardButton>
+						<JournalItem
+							title={data[1].title}
+							text={data[1].text}
+							date={data[1].date}
+						/>
+					</CardButton>
+				</JournalList>
+			</LeftPanel>
+			<Body>
+                <input
+                    type='text'
+                    value={inputData}
+                    onChange={inputChange}
+                />
+			</Body>
 		</div>
 	);
 }

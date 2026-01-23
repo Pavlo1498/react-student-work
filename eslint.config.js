@@ -14,7 +14,7 @@ export default defineConfig([
 			reactRefresh.configs.vite
 		],
 		languageOptions: {
-			ecmaVersion: 2020,
+			ecmaVersion: 2021,
 			globals: globals.browser,
 			parserOptions: {
 				ecmaVersion: 'latest',
@@ -27,6 +27,7 @@ export default defineConfig([
 				'warn',
 				{ allowConstantExport: true }
 			],
+			'react/jsx-uses-vars': 'error',
 			'semi': ['error', 'always', { 'omitLastInOneLineBlock': false}],
 			'comma-dangle': ['error', 'never'],
 			quotes: ['error', 'single'],

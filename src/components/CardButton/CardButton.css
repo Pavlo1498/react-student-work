@@ -6,6 +6,7 @@
     border: none;
     cursor: pointer;
     text-align: start;
+    width: 100%;
 }
 
 .card-button:hover {
